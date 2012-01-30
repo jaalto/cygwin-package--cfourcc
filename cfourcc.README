@@ -1,0 +1,80 @@
+cfourcc
+------------------------------------------
+
+Command line tool for changing FourCC code in AVI video files
+
+Identifies the codec used in AVI files (*.avi) and allows the user to
+change the FourCC description code. Useful for people working with
+AVI files.
+
+Runtime requirements:
+  cygwin
+
+Build requirements:
+  cygwin
+
+Canonical homepage:
+  http://sarovar.org/projects/gfourcc
+  http://packages.debian.org/unstable/cfourcc
+
+Canonical download:
+  http://sarovar.org/project/showfiles.php?group_id=246
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Author: Mohammad Hafiz bin Ismail <papit58@yahoo.com>, <papit01@sarovar.org>
+  Bugs: http://sarovar.org/tracker/?group_id=246
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack cfourcc-0.1.2-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./cfourcc*.sh all
+
+This will create:
+  cfourcc-0.1.2-1.tar.bz2
+  cfourcc-0.1.2-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+/usr/bin/cfourcc.exe
+/usr/share/doc/Cygwin/cfourcc-0.1.2.README
+/usr/share/doc/cfourcc-0.1.2/AUTHORS
+/usr/share/doc/cfourcc-0.1.2/BUGS
+/usr/share/doc/cfourcc-0.1.2/COPYING
+/usr/share/doc/cfourcc-0.1.2/ChangeLog
+/usr/share/doc/cfourcc-0.1.2/README
+/usr/share/doc/cfourcc-0.1.2/TODO
+/usr/share/doc/cfourcc-0.1.2/codeclist.txt
+/usr/share/man/man1/cfourcc.1.gz
+
+------------------
+
+Port Notes:
+- Makefile: rewrote install target
+
+----- version 0.1.2-1 -----
+- Initial release 2007-12-03 Jari Aalto
+- This port is based on Debian source
+- No manual page. Copied one from Debian.
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

@@ -1,0 +1,60 @@
+ Makefile |   44 +++++++++++++++++++++++++++++++++++++-------
+ 1 files changed, 37 insertions(+), 7 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 9d1c31d..6b67fd2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -13,15 +13,45 @@ PREFIX=/usr/local
+ all :
+ 	$(CC) $(CFLAGS) cfourcc.c -o cfourcc
+ 
+-install : all
++install-old: all
+ 	strip cfourcc
+ 	$(INSTALL) -m755 cfourcc $(PREFIX)/bin
+ 
+-clean : 
++clean :
+ 	rm -f cfourcc
+ 
+-
+-
+-
+-
+-
++DESTDIR		=
++prefix		= /usr
++exec_prefix	= $(prefix)
++man_prefix	= $(prefix)/share
++
++PACKAGE		= cfourcc
++INSTALL		= /usr/bin/install
++INSTALL_BIN	= $(INSTALL) -m 755
++INSTALL_SUID	= $(INSTALL) -m 4755
++INSTALL_DATA	= $(INSTALL) -m 644
++
++INSTALL_OBJS_BIN   = $(PACKAGE)
++INSTALL_OBJS_MAN1  = *.1
++INSTALL_OBJS_SHARE =
++
++MANDIR1		= $(DESTDIR)$(man_prefix)/man/man1
++MANDIR5		= $(DESTDIR)$(man_prefix)/man/man5
++MANDIR8		= $(DESTDIR)$(man_prefix)/man/man8
++BINDIR		= $(DESTDIR)$(exec_prefix)/bin
++SBINDIR		= $(DESTDIR)$(exec_prefix)/sbin
++ETCDIR		= $(DESTDIR)/etc/$(PACKAGE)
++SHAREDIR	= $(DESTDIR)$(prefix)/share/$(PACKAGE)
++LIBDIR		= $(DESTDIR)$(prefix)/lib/$(PACKAGE)
++
++install-bin:
++	# install-bin
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN) -s $(INSTALL_OBJS_BIN) $(BINDIR)
++
++install-man:
++	# install-man
++	$(INSTALL_BIN) -d $(MANDIR1)
++	$(INSTALL_DATA) $(INSTALL_OBJS_MAN1) $(MANDIR1)
++
++install: install-bin

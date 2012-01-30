@@ -1,0 +1,19 @@
+=== modified file 'CYGWIN-PATCHES/cfourcc.1'
+--- CYGWIN-PATCHES/cfourcc.1	2006-04-21 06:36:51 +0000
++++ CYGWIN-PATCHES/cfourcc.1	2006-04-21 06:37:58 +0000
+@@ -30,7 +30,7 @@
+ command.
+ .PP
+ .\" TeX users may be more comfortable with the \fB<whatever>\fP and
+-.\" \fI<whatever>\fP escape sequences to invode bold face and italics, 
++.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+ .\" respectively.
+ \fBcfourcc\fP identifies the codec used in AVI files (*.avi) and allows
+ the user to change the FourCC description code (like
+@@ -57,4 +57,4 @@
+ cfourcc was written by mypapit <papit58@yahoo.com>.
+ .PP
+ This manual page was written by Jarno Elonen <elonen@debian.org>,
+-for the Debian project (but may be used by others).
++(but may be used by others).
+

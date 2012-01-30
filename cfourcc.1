@@ -1,0 +1,60 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH CFOURCC 1 "March 29, 2006"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+cfourcc \- tool for changing FourCC in Microsoft RIFF AVI files
+.SH SYNOPSIS
+.B cfourcc
+.RI [-i] " <file.avi>"
+.br
+.B cfourcc
+.RI -u " <CODE>" " <file.avi>"
+.br
+.SH DESCRIPTION
+This manual page documents briefly the
+.B cfourcc
+command.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+\fBcfourcc\fP identifies the codec used in AVI files (*.avi) and allows
+the user to change the FourCC description code (like
+fourcc-changer in Windows). Useful for people working
+with Microsoft AVI file. A Linux clone of AviC fourcc changer tool.
+.SH OPTIONS
+.TP
+.B \-h
+Show summary of options.
+.TP
+.B \-i
+Prints FOURCC information (default)
+.TP
+.B \-f
+Force changing FOURCC on unsupported file
+.TP
+.B \-u CODE
+Sets FOURCC 'used' codec
+.TP
+.B \-d CODE
+Sets FOURCC 'description' codec
+.br
+.SH AUTHOR
+cfourcc was written by mypapit <papit58@yahoo.com>.
+.PP
+This manual page was written by Jarno Elonen <elonen@debian.org>,
+(but may be used by others).

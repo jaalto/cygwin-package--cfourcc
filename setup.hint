@@ -1,0 +1,6 @@
+sdesc: "Command line tool for changing FourCC in AVI video files"
+ldesc: "Identifies the codec used in AVI files (*.avi) and allows the user to
+change the FourCC description code. Useful for people working with
+AVI files."
+category: Utils
+requires: cygwin
